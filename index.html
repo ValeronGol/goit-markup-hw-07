@@ -536,27 +536,29 @@
             </div>
           </div>
           <div class="form-modal__field">
-            <label class="form-modal__label" for="user-comment">Почта</label>
+            <label class="form-modal__label" for="user-comment"
+              >Комментарий</label
+            >
             <textarea
               class="form-modal__textarea"
               name="comment"
               id="user-comment"
-              rows="8"
+              rows="6"
               placeholder="Введите текст"
             ></textarea>
           </div>
           <div class="form-modal__policy-container">
-            <input
-              class="form-modal__checkbox policy-checkbox visually-hidden"
-              type="checkbox"
-              name="policy"
-              id="policy"
-            />
             <label
               class="form-modal__label form-modal__label--policy"
               for="policy"
-            >
-              <span class="checkbox-icon"></span>
+              ><input
+                class="form-modal__checkbox policy-checkbox visually-hidden"
+                type="checkbox"
+                name="policy"
+                id="policy"
+              /><svg class="form_check-icon" width="16" height="15">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
               <span>Соглашаюсь с рассылкой и принимаю</span>
               <a class="form-modal__link" href="">Условия договора</a>
             </label>
