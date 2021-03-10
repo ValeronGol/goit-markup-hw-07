@@ -167,7 +167,7 @@
   text-decoration: underline;
 }
 
-.form_check-icon {
+.form-modal_check-icon {
   margin-right: 7px;
   border: 2px solid #2a2a2a;
   border-radius: 2px;
@@ -176,7 +176,7 @@
   transition: background-color $animу-dur $timing-function;
 }
 
-.form-modal__checkbox:checked + *.form_check-icon {
+.form-modal__checkbox:checked + *.form-modal_check-icon {
   border: none;
   background-color: $accent-color;
 }
