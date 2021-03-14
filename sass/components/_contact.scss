@@ -35,14 +35,11 @@
 .contact-footer__link {
   @extend %link;
   font-style: normal;
+  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   transition: color $animу-dur $timing-function;
-  
-  &--adress{
-    color: $primary-white-color;
-  }
 
   &:focus {
     color: $primary-white-color;}

@@ -9,6 +9,14 @@
   @include flexbox(baseline, space-between);
 }
 
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $primary-white-color;
+}
+
 .sign__caption {
   display: block;
   margin-bottom: 20px;

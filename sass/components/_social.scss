@@ -40,10 +40,6 @@
   width: 20px;
 }
 
-.social__item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .teamsocial {
   @include flexbox($justify: space-between);
   @extend %list;
