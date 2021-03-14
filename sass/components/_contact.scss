@@ -1,44 +1,50 @@
-.contact-header  {
+.contact_header  {
   @extend %list;
   display: flex;
 }
 
-.contact-header__item:not(:last-child){
+.contact_header__item:not(:last-child){
   margin-right: 50px;
 }
 
-.contact-header__link {
+.contact_header__link {
   @include flexbox();
   @extend %link;
   @extend %nav-link;
   color: $primary-text-color;
+  transition: color $animу-dur $timing-function;
 
   &:hover, &:focus{
-      color: $accent-color;}
+    color: $accent-color;}
 
 }
 
-.contact-header__icon {
+.contact_header__icon {
   @extend %icon;
   margin-right: 10px;
 }
 
-.contact-footer__list {
+.contact_footer__list {
   @extend %list;
 }
 
-.contact-footer__link {
+.contact_footer__item:not(:first-child) {
+  margin-top: 9px;
+} 
+
+.contact_footer__link {
   @extend %link;
   font-style: normal;
   line-height: 1.71;
+  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  transition: color 250ms $timing-function;
+  transition: color $animу-dur $timing-function;
+  
+  &--adress{
+    color: $primary-white-color;
+  }
 
-  &:hover, &:focus {
+  &:focus {
     color: $primary-white-color;}
-
 }
 
-.contact-footer__item:not(:last-child) {
-  margin-bottom: 9px;
-}

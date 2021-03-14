@@ -1,10 +1,12 @@
-.site-nav {
+.site_nav {
   @extend %list;
   display: flex;
   margin-left: 93px;
-}
 
-.site-nav__link {
+  &__item:not(:first-child) {
+    margin-left: 50px;}}
+
+.site_nav__link {
   @extend %nav-link;
   @extend %link;
   position: relative;
@@ -26,9 +28,4 @@
     height: 4px;
     border-radius: 2px;
     background-color: $accent-color;}
-
-}
-
-.site-nav__item:not(:last-child) {
-  margin-right: 50px;
 }

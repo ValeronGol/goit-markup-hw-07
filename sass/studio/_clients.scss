@@ -14,7 +14,7 @@
   border-radius: 4px;
   min-height: 90px;
   color: $primary-icon-color;
-  transition: color 250ms $timing-function, border-color 250ms $timing-function;
+  transition: color $animу-dur $timing-function, border-color $animу-dur $timing-function;
 
   &:hover, &:focus{
     color: $accent-color;

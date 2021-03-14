@@ -8,7 +8,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms $timing-function;
+  transition: opacity $animу-dur $timing-function;
 }
 
 .modal {
@@ -21,8 +21,10 @@
   margin: 0 auto;
   padding: 40px;
   background-color: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms $timing-function;
+  transition: transform $animу-dur $timing-function;
 }
 
 .close-btn {
@@ -40,7 +42,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: $primary-white-color;
   cursor: pointer;
-  transition: color 250ms $timing-function;
+  transition: color $animу-dur $timing-function;
 
   &:hover {
     color: $accent-color;
@@ -54,6 +56,7 @@
 }
 
 .backdrop.is-hidden {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -62,32 +65,36 @@
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-.form-modal {
+.form_modal {
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
+  color: $primary-text-color;
 }
 
-.form-modal__input-wrap {
+.form_modal__input-wrap {
   position: relative;
 }
 
-.form-modal__caption {
+.form_modal__caption {
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
+  letter-spacing: 0.03em;
   text-align: center;
   color: $title-text-color;
 }
 
-.form-modal__field {
+.form_modal__field {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.form-modal__icon {
+.form_modal__icon {
   @extend %icon;
   position: absolute;
   top: 50%;
@@ -96,18 +103,20 @@
   width: 18px;
   height: 18px;
   fill: $title-text-color;
+  @include transition(fill);
 
-  .form-modal__input:focus + & {
+  .form_modal__input:focus + & {
     fill: $accent-color;
   }
 }
 
-.form-modal__label {
+.form_modal__label {
   margin-bottom: 4px;
 }
 
-.form-modal__input {
+.form_modal__input {
   @extend %input;
+  @include transition(border);
 
   &:focus {
     border: 1px solid $accent-color;
@@ -115,41 +124,44 @@
   }
 }
 
-.form-modal__textarea {
+.form_modal__textarea {
   @extend %input;
-
+  
   &:focus {
     border: 1px solid $accent-color;
     outline: none;
   }
 }
 
-.form-modal__textarea {
+.form_modal__textarea {
   padding: 12px 16px;
+  height: 120px;
   resize: none;
   margin-bottom: 10px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
 
   &::placeholder {
     color: rgba(117, 117, 117, 0.5);
   }
 }
 
-.form-modal__btn {
+.form_modal__btn {
   @extend %button;
   display: block;
-  padding: 10px 55px;
+  padding: 10px 55px 10px 56px ;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 0 auto;
 }
 
-.form-modal__policy-container {
+.form_modal__policy-container {
   @include flexbox($justify: center);
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
 }
 
-.form-modal__label--policy {
+.form_modal__label--policy {
   display: flex;
   align-items: baseline;
   cursor: pointer;
@@ -158,7 +170,7 @@
   letter-spacing: 0.03em;
 }
 
-.form-modal__link {
+.form_modal__link {
   @extend %link;
   margin-left: 3px;
   font-weight: 400;
@@ -167,16 +179,16 @@
   text-decoration: underline;
 }
 
-.form-modal_check-icon {
+.form_modal_check_icon {
   margin-right: 7px;
   border: 2px solid #2a2a2a;
   border-radius: 2px;
   fill: $primary-white-color;
   transform: translateY(15%);
-  transition: background-color $animу-dur $timing-function;
+  @include transition(background-color); 
 }
 
-.form-modal__checkbox:checked + *.form-modal_check-icon {
+.form_modal__checkbox:checked + *.form_modal_check_icon {
   border: none;
   background-color: $accent-color;
 }

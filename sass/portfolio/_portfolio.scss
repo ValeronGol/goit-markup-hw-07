@@ -18,16 +18,15 @@
   letter-spacing: 0.03em;
   color: $title-text-color;
   background-color: $secondary-background-color;
-  transition: background-color 250ms $timing-function, color 250ms $timing-function, box-shadow 250ms $timing-function;
+  transition: background-color $animу-dur $timing-function, color $animу-dur $timing-function, box-shadow $animу-dur $timing-function;
 
   &:hover,
   &:focus,
   &--current{
     background-color: $accent-color;
     color: $primary-white-color;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);}
-
-  }
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  }}
 
 .portfolio {
   @include grid($set-gap);
@@ -43,7 +42,7 @@
   @extend %link;
   display: block;
   cursor: pointer;
-  transition: box-shadow 250ms $timing-function;
+  transition: box-shadow $animу-dur $timing-function;
 
   &:hover, &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);}
@@ -92,12 +91,11 @@
   width: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform 250ms $timing-function;
+  transition: transform $animу-dur $timing-function;
 
   .portfolio__link:hover &, 
   .portfolio__link:focus &{
-    transform: translateX(0);
-}
+    transform: translateX(0);}
 
 }
 
