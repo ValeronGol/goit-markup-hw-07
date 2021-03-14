@@ -65,7 +65,7 @@
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-.form_modal {
+.form-modal {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -73,11 +73,11 @@
   color: $primary-text-color;
 }
 
-.form_modal__input-wrap {
+.form-modal__input-wrap {
   position: relative;
 }
 
-.form_modal__caption {
+.form-modal__caption {
   display: block;
   margin-bottom: 12px;
   font-weight: 700;
@@ -88,13 +88,13 @@
   color: $title-text-color;
 }
 
-.form_modal__field {
+.form-modal__field {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.form_modal__icon {
+.form-modal__icon {
   @extend %icon;
   position: absolute;
   top: 50%;
@@ -105,16 +105,16 @@
   fill: $title-text-color;
   @include transition(fill);
 
-  .form_modal__input:focus + & {
+  .form-modal__input:focus + & {
     fill: $accent-color;
   }
 }
 
-.form_modal__label {
+.form-modal__label {
   margin-bottom: 4px;
 }
 
-.form_modal__input {
+.form-modal__input {
   @extend %input;
   @include transition(border);
 
@@ -124,7 +124,7 @@
   }
 }
 
-.form_modal__textarea {
+.form-modal__textarea {
   @extend %input;
   
   &:focus {
@@ -133,7 +133,7 @@
   }
 }
 
-.form_modal__textarea {
+.form-modal__textarea {
   padding: 12px 16px;
   height: 120px;
   resize: none;
@@ -146,7 +146,7 @@
   }
 }
 
-.form_modal__btn {
+.form-modal__btn {
   @extend %button;
   display: block;
   padding: 10px 55px 10px 56px ;
@@ -154,14 +154,14 @@
   margin: 0 auto;
 }
 
-.form_modal__policy-container {
+.form-modal__policy-container {
   @include flexbox($justify: center);
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
 }
 
-.form_modal__label--policy {
+.form-modal__label--policy {
   display: flex;
   align-items: baseline;
   cursor: pointer;
@@ -170,7 +170,7 @@
   letter-spacing: 0.03em;
 }
 
-.form_modal__link {
+.form-modal__link {
   @extend %link;
   margin-left: 3px;
   font-weight: 400;
@@ -179,7 +179,7 @@
   text-decoration: underline;
 }
 
-.form_modal_check_icon {
+.form-modal_check_icon {
   margin-right: 7px;
   border: 2px solid #2a2a2a;
   border-radius: 2px;
@@ -188,7 +188,7 @@
   @include transition(background-color); 
 }
 
-.form_modal__checkbox:checked + *.form_modal_check_icon {
+.form-modal__checkbox:checked + *.form-modal_check_icon {
   border: none;
   background-color: $accent-color;
 }

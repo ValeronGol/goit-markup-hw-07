@@ -1,13 +1,13 @@
-.contact_header  {
+.contact-header  {
   @extend %list;
   display: flex;
 }
 
-.contact_header__item:not(:last-child){
+.contact-header__item:not(:last-child){
   margin-right: 50px;
 }
 
-.contact_header__link {
+.contact-header__link {
   @include flexbox();
   @extend %link;
   @extend %nav-link;
@@ -19,20 +19,20 @@
 
 }
 
-.contact_header__icon {
+.contact-header__icon {
   @extend %icon;
   margin-right: 10px;
 }
 
-.contact_footer__list {
+.contact-footer__list {
   @extend %list;
 }
 
-.contact_footer__item:not(:first-child) {
+.contact-footer__item:not(:first-child) {
   margin-top: 9px;
 } 
 
-.contact_footer__link {
+.contact-footer__link {
   @extend %link;
   font-style: normal;
   line-height: 1.71;

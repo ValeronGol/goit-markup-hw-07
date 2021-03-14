@@ -1,4 +1,4 @@
-.site_nav {
+.site-nav {
   @extend %list;
   display: flex;
   margin-left: 93px;
@@ -6,7 +6,7 @@
   &__item:not(:first-child) {
     margin-left: 50px;}}
 
-.site_nav__link {
+.site-nav__link {
   @extend %nav-link;
   @extend %link;
   position: relative;
