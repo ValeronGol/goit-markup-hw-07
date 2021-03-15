@@ -1,5 +1,4 @@
 .site-nav {
-  @extend %list;
   display: flex;
   margin-left: 93px;
 
@@ -10,6 +9,7 @@
   @extend %nav-link;
   @extend %link;
   position: relative;
+  @include transition(color);
 
   &:hover,
   &:focus {

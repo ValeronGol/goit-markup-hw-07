@@ -4,12 +4,6 @@
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.feature__list, .specialization__list, .team__list, .clients__list, .projectfilter, .portfolio, .site-nav, .contact-header, .contact-footer__list, .social, .teamsocial {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
 .portfolio__link, .site-nav__link, .contact-header__link, .contact-footer__link, .social__link, .teamsocial__link, .form-modal__link {
   text-decoration: none;
 }
@@ -25,6 +19,7 @@
   text-align: center;
   letter-spacing: 0.06em;
   text-decoration: none;
+  outline: none;
   background-color: #2196f3;
   color: #ffffff;
   border: 0;
@@ -80,8 +75,14 @@ img {
   height: auto;
 }
 
-.hero__button:hover {
-  cursor: pointer;
+P,
+h1,
+h2,
+h3,
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .visually-hidden {
@@ -142,14 +143,17 @@ img {
 }
 
 .hero__title {
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin: 0px auto 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.hero__button:hover {
+  cursor: pointer;
 }
 
 .feature__list {
@@ -195,7 +199,11 @@ img {
 .feature__text {
   margin-top: 10px;
   margin-bottom: 0;
-  line-height: 1.71;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: #757575;
 }
 
 .specialization__list {
@@ -234,7 +242,10 @@ img {
   width: 100%;
   padding: 0;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
   background-color: rgba(47, 48, 58, 0.8);
@@ -260,6 +271,7 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: #f5f4fa;
+  text-align: center;
 }
 
 .team__thumb {
@@ -273,20 +285,21 @@ img {
 }
 
 .team__title {
-  margin-top: 0;
-  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
+  letter-spacing: 0.03em;
   color: #212121;
 }
 
 .team__text {
   margin-bottom: 16px;
+  margin-top: 10px;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
+  letter-spacing: 0.03em;
+  color: #757575;
 }
 
 .clients__list {
@@ -319,8 +332,10 @@ img {
   border-radius: 4px;
   min-height: 90px;
   color: #afb1b8;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients__link:hover, .clients__link:focus {
@@ -343,22 +358,26 @@ img {
   margin-bottom: 50px;
 }
 
-.projectfilter__item:not(:last-child) {
-  margin-right: 8px;
+.projectfilter__item:not(:first-child) {
+  margin-left: 8px;
 }
 
 .projectfilter__btn {
   padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.63;
+  line-height: 1.62;
   letter-spacing: 0.03em;
   color: #212121;
   background-color: #f5f4fa;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projectfilter__btn:hover, .projectfilter__btn:focus, .projectfilter__btn--current {
@@ -389,6 +408,7 @@ img {
 .portfolio__link {
   display: block;
   cursor: pointer;
+  outline: none;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -417,9 +437,10 @@ img {
 }
 
 .portfolio__text {
-  margin: 0;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.03em;
   color: #757575;
 }
 
@@ -461,6 +482,8 @@ img {
   margin: 0;
   font-size: 18px;
   line-height: 1.56;
+  font-weight: 400;
+  letter-spacing: 0.03em;
   color: #ffffff;
 }
 
@@ -501,6 +524,8 @@ img {
 
 .site-nav__link {
   position: relative;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav__link:hover, .site-nav__link:focus {
@@ -544,8 +569,8 @@ img {
       -ms-flex-pack: start;
           justify-content: flex-start;
   color: #757575;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: bcolor 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: bcolor 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-header__link:hover, .contact-header__link:focus {
@@ -566,8 +591,6 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-footer__link:focus {

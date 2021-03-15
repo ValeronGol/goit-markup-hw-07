@@ -13,12 +13,18 @@
 }
 
 .hero__title {
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin: 0px auto 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $primary-white-color
+}
+
+.hero__button {
+  @extend %button;
+
+  &:hover {
+    cursor: pointer;}
 }

@@ -1,6 +1,5 @@
 .specialization__list{
   @include grid($set-gap);
-  @extend %list;
 }
 
 .specialization__item {
@@ -20,7 +19,10 @@
   width: 100%;
   padding: 0;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $primary-white-color;
   background-color: rgba(47, 48, 58, 0.8);

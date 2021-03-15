@@ -10,7 +10,7 @@ html {
 
 body {
   margin: 0;
-  font-family: $primary-font-famil;
+  font-family: $primary-font-family;
   font-size: 14px;
   letter-spacing: 0.03em;
   color: $primary-text-color;
@@ -22,9 +22,12 @@ img {
   height: auto;
 }
 
-.hero__button {
-  @extend %button;
-
-  &:hover {
-    cursor: pointer;}
+P,
+h1,
+h2,
+h3, 
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }

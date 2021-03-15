@@ -11,7 +11,6 @@
 
 .social {
   @include flexbox($justify: space-between);
-  @extend %list;
 
   &__item:not(:first-child) {
     margin-left: 10px;}}
@@ -42,7 +41,6 @@
 
 .teamsocial {
   @include flexbox($justify: space-between);
-  @extend %list;
 }
 
 .teamsocial__link {

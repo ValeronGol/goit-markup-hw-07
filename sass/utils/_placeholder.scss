@@ -3,12 +3,6 @@
   @include transition(fill);
 }
 
-%list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
 %link {
   text-decoration: none;
 }
@@ -22,6 +16,7 @@
   text-align: center;
   letter-spacing: 0.06em;
   text-decoration: none;
+  outline: none;
   background-color: $accent-color;
   color: $primary-white-color;
   border: 0;

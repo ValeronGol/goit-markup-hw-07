@@ -1,5 +1,4 @@
 .contact-header  {
-  @extend %list;
   display: flex;
 }
 
@@ -12,7 +11,7 @@
   @extend %link;
   @extend %nav-link;
   color: $primary-text-color;
-  transition: color $animу-dur $timing-function;
+  @include transition(bcolor); 
 
   &:hover, &:focus{
     color: $accent-color;}
@@ -22,10 +21,6 @@
 .contact-header__icon {
   @extend %icon;
   margin-right: 10px;
-}
-
-.contact-footer__list {
-  @extend %list;
 }
 
 .contact-footer__item:not(:first-child) {
@@ -39,7 +34,7 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  transition: color $animу-dur $timing-function;
+  
 
   &:focus {
     color: $primary-white-color;}
